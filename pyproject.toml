@@ -1,0 +1,24 @@
+[build-system]
+requires = ["flit_core >=3.2"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "unraidclaw"
+version = "0.1.0"
+description = "CLI for the UnraidClaw AI Agent Gateway — manage Unraid servers from the terminal"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Will Gross"}]
+requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = []
+
+[project.scripts]
+unraidclaw = "unraidclaw.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/WillGross/unraidclaw-cli"
