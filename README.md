@@ -12,10 +12,15 @@ Command-line interface for the [UnraidClaw](https://github.com/emaspa/unraidclaw
 ## Install
 
 ```bash
-# From source
+# Direct from GitHub
+pip install git+https://github.com/wgross19/unraidclaw-cli.git
+
+# Clone + install locally
+git clone https://github.com/wgross19/unraidclaw-cli.git
+cd unraidclaw-cli
 pip install .
 
-# Or in development mode
+# Or in development mode (editable)
 pip install -e .
 ```
 

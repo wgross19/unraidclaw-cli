@@ -36,7 +36,13 @@ PYTHONPATH=. python3 -m unraidclaw <command>
 ## How to install
 
 ```bash
-pip install -e /artifacts/repos/unraidclaw-cli
+# Direct from GitHub (recommended)
+pip install git+https://github.com/wgross19/unraidclaw-cli.git
+
+# Or clone and install locally
+git clone https://github.com/wgross19/unraidclaw-cli.git
+cd unraidclaw-cli
+pip install -e .
 # Then: unraidclaw health
 ```
 
