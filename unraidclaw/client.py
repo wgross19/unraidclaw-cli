@@ -5,8 +5,41 @@ import os
 import ssl
 import urllib.request
 import urllib.error
+from pathlib import Path
 from typing import Any
 from . import __version__
+
+
+def _load_dotenv() -> None:
+    """Load .env file from project root into os.environ.
+    
+    Reads the file at <project-root>/.env if it exists.
+    Does NOT override already-set environment variables,
+    so exports and CLI flags always take precedence.
+    """
+    env_file = Path(__file__).resolve().parent.parent / ".env"
+    if not env_file.is_file():
+        return
+
+    with open(env_file) as f:
+        for line in f:
+            line = line.strip()
+            # Skip blank lines and comments
+            if not line or line.startswith("#"):
+                continue
+            # Parse KEY=VALUE (allow = in value)
+            if "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key = key.strip()
+            value = value.strip()
+
+            # Remove optional surrounding quotes
+            if len(value) >= 2 and value[0] == value[-1] and value[0] in ('"', "'"):
+                value = value[1:-1]
+
+            if key and key not in os.environ:
+                os.environ[key] = value
 
 
 class UnraidAPIError(Exception):

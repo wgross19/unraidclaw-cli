@@ -46,6 +46,7 @@ from . import client, output
 
 
 def main():
+    client._load_dotenv()
     parser = _build_parser()
     args = parser.parse_args()
 
