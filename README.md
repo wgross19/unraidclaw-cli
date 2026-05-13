@@ -1,6 +1,6 @@
 # UnraidClaw CLI
 
-[![repo](https://img.shields.io/badge/repo-WillGross/unraidclaw--cli-blue)](https://github.com/WillGross/unraidclaw-cli)
+[![repo](https://img.shields.io/badge/repo-wgross19/unraidclaw--cli-blue)](https://github.com/wgross19/unraidclaw-cli)
 
 Command-line interface for the [UnraidClaw](https://github.com/emaspa/unraidclaw) AI Agent Gateway — control your Unraid server from the terminal or any AI agent.
 

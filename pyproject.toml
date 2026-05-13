@@ -21,4 +21,4 @@ dependencies = []
 unraidclaw = "unraidclaw.__main__:main"
 
 [project.urls]
-Repository = "https://github.com/WillGross/unraidclaw-cli"
+Repository = "https://github.com/wgross19/unraidclaw-cli"

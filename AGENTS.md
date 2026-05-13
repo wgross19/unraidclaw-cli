@@ -2,7 +2,7 @@
 
 Python command-line interface for the UnraidClaw API gateway.
 
-- **This repo:** `https://github.com/WillGross/unraidclaw-cli`
+- **This repo:** `https://github.com/wgross19/unraidclaw-cli`
 - **Upstream API dep:** [UnraidClaw plugin](https://github.com/emaspa/unraidclaw) (Unraid 7.0+, port 9876)
 
 ## Project identity
