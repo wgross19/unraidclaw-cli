@@ -104,6 +104,8 @@ def _request(method: str, path: str, body: Any = None) -> Any:
 
     if not body_dict.get("ok"):
         err = body_dict.get("error", {})
+        if isinstance(err, str):
+            raise UnraidAPIError(err, error_code="UNKNOWN")
         raise UnraidAPIError(
             err.get("message", "Unknown error"),
             error_code=err.get("code", "UNKNOWN"),
